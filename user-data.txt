@@ -1,0 +1,6 @@
+#cloud-config
+runcmd:
+ - yum -y check-update
+ - yum -y update
+ - curl -s https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | bash
+ - yum -y install rabbitmq-server
